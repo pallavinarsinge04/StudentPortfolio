@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h3>Hello 👋</h3>
+
+        <h1>I'm <span>Pallavi Narsinge</span></h1>
+
+        <h2>Python Full Stack Developer</h2>
+
+        <p>
+            Passionate Computer Science student who loves building
+            modern web applications and Android apps using Django,
+            React, MySQL and Kotlin.
+        </p>
+
+        <a href="#" class="btn">
+            Download Resume
+        </a>
+
+        <a href="#contact" class="btn2">
+            Contact Me
+        </a>
+
+    </div>
+
+</section>
+
+<!-- About -->
+
+<section id="about">
+
+    <h1 class="title">About Me</h1>
+
+    <div class="about">
+
+        <p>
+
+            I am a Computer Science Engineering student with strong
+            knowledge of Python, Django, JavaScript, React,
+            MySQL and Android Development.
+
+            I enjoy solving problems and creating projects that
+            make learning and productivity easier.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Skills -->
+
+<section id="skills">
+
+<h1 class="title">Skills</h1>
+
+<div class="skills">
+
+<div class="card">Python</div>
+
+<div class="card">Django</div>
+
+<div class="card">React</div>
+
+<div class="card">JavaScript</div>
+
+<div class="card">HTML</div>
+
+<div class="card">CSS</div>
+
+<div class="card">MySQL</div>
+
+<div class="card">Git & GitHub</div>
+
+<div class="card">Firebase</div>
+
+<div class="card">Kotlin</div>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
+
+<h1 class="title">Projects</h1>
+
+<div class="project-container">
+
+{% for project in projects %}
+
+<div class="project-card">
+
+<h2>{{project.title}}</h2>
+
+<p>{{project.description}}</p>
+
+<p>{{project.technology}}</p>
+
+<a href="{{project.github}}" target="_blank">
+
+<button>GitHub</button>
+
+</a>
+
+</div>
+
+{% empty %}
+
+<div class="project-card">
+
+<h2>AI Quiz Platform</h2>
+
+<p>
+
+AI Powered Quiz and Flashcard Application
+
+built using Django, React and MySQL.
+
+</p>
+
+<button>Coming Soon</button>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+
+<!-- Education -->
+
+<section id="education">
+
+<h1 class="title">Education</h1>
+
+<div class="edu-card">
+
+<h2>B.Tech Computer Science</h2>
+
+<p>
+
+Computer Science Engineering Student
+
+Interested in AI, Full Stack Development
+
+and Android Development.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h1 class="title">Contact Me</h1>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="6" placeholder="Message"></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</section>
+
+{% endblock %}
