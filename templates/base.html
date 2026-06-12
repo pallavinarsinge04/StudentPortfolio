@@ -1,25 +1,116 @@
-<nav class="navbar">
+{% load static %}
 
-    <div class="logo">
-        Pallavi Narsinge
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Professional Student Portfolio</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Pallavi Narsinge
+        </div>
+
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button id="theme-toggle">🌙</button>
+
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- ================= Footer ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-section">
+
+            <h2>Pallavi Narsinge</h2>
+
+            <p>
+                Python Full Stack Developer | Android Developer
+            </p>
+
+            <p>
+                Building modern web and mobile applications.
+            </p>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#skills">Skills</a></li>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h3>Contact</h3>
+
+            <p>📧 pallavinarsinge123@gmail.com</p>
+
+            <p>📱 +91 9529 296579</p>
+
+            <p>📍 Maharashtra, India</p>
+
+        </div>
+
+        <div class="footer-section">
+
+            <h3>Connect With Me</h3>
+
+            <div class="social-icons">
+
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+
+                <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+
+                <a href="mailto:youremail@gmail.com">Email</a>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <ul class="nav-menu">
+    <hr>
 
-        <li><a href="#home">Home</a></li>
+    <div class="copyright">
 
-        <li><a href="#about">About</a></li>
+        © 2026 Pallavi Narsinge | All Rights Reserved
 
-        <li><a href="#skills">Skills</a></li>
+    </div>
 
-        <li><a href="#projects">Projects</a></li>
-
-        <li><a href="#education">Education</a></li>
-
-        <li><a href="#contact">Contact</a></li>
-
-    </ul>
-
-    <button id="theme-toggle">🌙</button>
-
-</nav>
+</footer>
+</body>
+</html>
