@@ -1,9 +1,6 @@
-```css
-/* ================= PROJECT SECTION ================= */
 
 #projects{
-    padding:80px 8%;
-    background:#081229;
+    padding:80px;
 }
 
 .project-container{
@@ -14,24 +11,23 @@
 
 .project-card{
 
-    position:relative;
-    overflow:hidden;
-
     background:#172554;
-
-    border-radius:20px;
 
     padding:30px;
 
-    transition:0.5s ease;
+    border-radius:20px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.3);
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.5s;
+
+    cursor:pointer;
 
 }
 
-/* Animated Light Sweep */
-
-.project-card::before{
+.project-card::after{
 
     content:"";
 
@@ -41,14 +37,14 @@
 
     left:-150%;
 
-    width:50%;
+    width:60%;
 
     height:100%;
 
     background:linear-gradient(
         120deg,
         transparent,
-        rgba(255,255,255,.4),
+        rgba(255,255,255,.5),
         transparent
     );
 
@@ -56,7 +52,7 @@
 
 }
 
-.project-card:hover::before{
+.project-card:hover::after{
 
     animation:shine .8s linear;
 
@@ -78,7 +74,7 @@
 
     transform:translateY(-10px) scale(1.03);
 
-    box-shadow:0 20px 45px rgba(37,99,235,.4);
+    box-shadow:0 15px 35px rgba(37,99,235,.5);
 
 }
 
@@ -88,9 +84,9 @@
 
     height:90px;
 
-    border-radius:50%;
-
     background:#2563eb;
+
+    border-radius:50%;
 
     display:flex;
 
@@ -98,9 +94,9 @@
 
     align-items:center;
 
-    margin:auto;
-
     font-size:45px;
+
+    margin:auto;
 
     margin-bottom:20px;
 
@@ -120,25 +116,21 @@
 
     color:#3b82f6;
 
-    margin-bottom:15px;
-
 }
 
 .project-card p{
 
     text-align:center;
 
-    color:#d1d5db;
-
-    line-height:28px;
+    color:#ddd;
 
 }
 
 .tech-stack{
 
-    margin:20px 0;
-
     text-align:center;
+
+    margin:20px 0;
 
 }
 
@@ -146,15 +138,15 @@
 
     display:inline-block;
 
+    background:#2563eb;
+
+    color:white;
+
     padding:8px 15px;
 
     margin:5px;
 
     border-radius:20px;
-
-    background:#2563eb;
-
-    color:white;
 
 }
 
@@ -166,31 +158,19 @@
 
     gap:15px;
 
-    margin-top:20px;
-
 }
 
 .project-buttons a{
 
     text-decoration:none;
 
-    color:white;
-
     background:#2563eb;
+
+    color:white;
 
     padding:12px 22px;
 
     border-radius:8px;
 
-    transition:.3s;
-
 }
 
-.project-buttons a:hover{
-
-    background:#1d4ed8;
-
-    transform:scale(1.05);
-
-}
-```
