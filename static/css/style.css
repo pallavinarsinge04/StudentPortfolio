@@ -8,7 +8,6 @@
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:30px;
 }
-
 .project-card{
 
     background:#172554;
