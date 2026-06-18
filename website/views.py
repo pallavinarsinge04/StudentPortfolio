@@ -30,7 +30,6 @@ Message:
             recipient_list=["pallavinarsinge123@gmail.com"],
             fail_silently=False,
         )
-
         return redirect("home")
 
     return render(request, "home.html")
