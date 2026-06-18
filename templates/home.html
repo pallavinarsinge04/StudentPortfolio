@@ -331,41 +331,26 @@
 <h1 class="title">Contact Me</h1>
 
 <form method="POST">
-
     {% csrf_token %}
 
-    <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        required
-    >
+    <input type="text" name="name" placeholder="Your Name" required>
 
-    <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        required
-    >
+    <input type="email" name="email" placeholder="Your Email" required>
 
-    <textarea
-        name="message"
-        rows="6"
-        placeholder="Your Message"
-        required
-    ></textarea>
+    <textarea name="message" placeholder="Message" required></textarea>
 
     <button type="submit">
         Send Message
     </button>
-
 </form>
 
 {% if success %}
-<p style="color:green;">
-    ✅ Message sent successfully!
+<p style="color:green; margin-top:15px;">
+    {{ success }}
 </p>
 {% endif %}
+
+
 
 </section>
 
