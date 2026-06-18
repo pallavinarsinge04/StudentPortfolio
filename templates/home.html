@@ -11,7 +11,7 @@
 
         <div class="profile-image">
 
-            <img src="/media/profile/profile.jpg" alt="Pallavi Narsinge">
+            <img src="/media/profile/profile.jpeg" alt="Pallavi Narsinge">
 
         </div>
 
@@ -177,12 +177,6 @@
                 recommendations using Django and MySQL.
             </p>
 
-            <div class="tech-stack">
-                <span>Django</span>
-                <span>MySQL</span>
-                <span>React</span>
-                <span>AI</span>
-            </div>
 
             <div class="project-buttons">
                 <a href="https://github.com/pallavinarsinge04/smart_ai_ecommerce">GitHub</a>
@@ -206,16 +200,7 @@
         automated workflow management.
     </p>
 
-    <div class="tech-stack">
-        <span>React</span>
-        <span>Node.js</span>
-        <span>Express</span>
-        <span>MongoDB</span>
-        <span>Socket.io</span>
-        <span>JWT</span>
-        <span>AI</span>
-    </div>
-
+   
     <div class="project-buttons">
         <a href="https://github.com/pallavinarsinge04/TaskFlowAI" target="_blank">
             GitHub
@@ -241,13 +226,7 @@
                 learning, progress tracking, authentication, and analytics.
             </p>
 
-            <div class="tech-stack">
-                <span>Django</span>
-                <span>React</span>
-                <span>MySQL</span>
-                <span>AI</span>
-            </div>
-
+            
             <div class="project-buttons">
                 <a href="https://github.com/pallavinarsinge04/QuizGenie-AI">GitHub</a>
                 <a href="#">Live Demo</a>
@@ -351,21 +330,42 @@
 
 <h1 class="title">Contact Me</h1>
 
-<form>
+<form method="POST">
 
-<input type="text" placeholder="Your Name">
+    {% csrf_token %}
 
-<input type="email" placeholder="Your Email">
+    <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+    >
 
-<textarea rows="6" placeholder="Message"></textarea>
+    <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+    >
 
-<button type="submit">
+    <textarea
+        name="message"
+        rows="6"
+        placeholder="Your Message"
+        required
+    ></textarea>
 
-Send Message
-
-</button>
+    <button type="submit">
+        Send Message
+    </button>
 
 </form>
+
+{% if success %}
+<p style="color:green;">
+    ✅ Message sent successfully!
+</p>
+{% endif %}
 
 </section>
 
